@@ -185,7 +185,7 @@ header {
 .heroimgdesc {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
       top: -81px;
 }
@@ -196,7 +196,7 @@ header {
   object-fit: cover;
 }
 
-/* Dark overlay */
+
 .heroimgdesc::before {
   content: "";
   position: absolute;
@@ -208,7 +208,7 @@ header {
   z-index: 1;
 }
 
-/* Wrapper for text content */
+
 .herocontent {
   position: absolute;
   top: 50%;
@@ -218,7 +218,7 @@ header {
   color: #fff;
   max-width: 900px;
   padding: 0 20px;
-  z-index: 2; /* Above overlay */
+  z-index: 2; 
 }
 
 .herocontent h1 {
@@ -233,7 +233,7 @@ header {
   margin-bottom: 30px;
 }
 
-/* Buttons */
+
 .btnfortop a {
   background-color: red;
   padding: 12px 24px;
@@ -1225,28 +1225,7 @@ footer {
     pointer-events: none;
 }
 
-/* .py-5{
-      position: relative;
-    z-index: 1;
-}
 
-.py-5 ol{
-  padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-}
-
-.py-5 ol li{
-  color: #212529bf;
-   list-style: none;   
-  padding: 0;        
-  margin: 0;
-}
-
-.py-5 ol li h2{
-      color: white !important;
-      text-align: center;
-          border-bottom: 1px solid #dee2e6 !important;
-} */
 
 .ab{
   width: 100%;
@@ -1256,8 +1235,13 @@ footer {
     text-align: center; 
     height: 100%;
 }
-.demo{
-      border-bottom: 1px solid #dee2e6 !important;
+
+.demo {
+    border-bottom: 1px solid #dee2e6 !important;
+    color: #ffffff;   /* Pure White */
+    font-weight: 600; /* Bold look */
+    position: relative;
+    z-index: 1;       /* Overlay par text always top ma rahe */
 }
 
 /* new page */
@@ -1774,9 +1758,41 @@ gap: 10px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform .4s ease, box-shadow .4s ease;
+
     background: #fff;
     margin-top: 20px;
+    position: relative;
+}
+
+.applic--card::before {
+       content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 0, 0, 0.15); /* light red */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.applicimg00 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* 🔹 Hover zoom image inside */
+.applic--card:hover .applicimg00 img {
+    transform: scale(1.2); /* image zoom inside */
+}
+
+.applic--card:hover::before {
+    opacity: 1; /* light red overlay visible */
+}
+
+/* 🔹 Content always on top */
+.appliccontent {
+    position: relative;
+    z-index: 2;
 }
 
 .applicimg00{
@@ -1794,3 +1810,116 @@ gap: 10px;
       font-size: 1.25rem;
 
 }
+
+.applic--card:hover .appliccontent h5 {
+    color: #e60000; /* red text */
+}
+
+
+/* contact */
+
+.contact-section {
+      max-width: 1100px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      /* background: #111; */
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    .contact-info h2 {
+      font-size: 35px;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .contact-info p {
+      color: #000000;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: #b51313;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-right: 15px;
+      color: #ff2e2e;
+    }
+
+    .info-icon img{
+      width: 20px;
+    }
+
+    .info-text h4 {
+      margin: 0;
+      color: #ff2e2e;
+    }
+
+    .info-text p {
+      margin: 3px 0 0;
+      color: #000000;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      /* background: #222; */
+      /* border: none; */
+      outline: none;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #fff;
+          border: 1px solid black;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #aaa;
+    }
+
+    .contact-form button {
+      /* width: 100%; */
+      background: #ff2e2e;
+      border: none;
+      padding: 15px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000000;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #e01b1b;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .info-box {
+        justify-content: center;
+      }
+    }
+
+
