@@ -55,6 +55,18 @@
 </head>
 
 <body>
+    <div id="preloader">
+    <div class="loader">
+      <img src="images/New Project.png" alt="Loading..."> <!-- 🔹 Tamaro logo -->
+    </div>
+    <p style="color:#fff; margin-top:15px; font-size: 20px; font-weight:700;">Welcome to Sefty Controls & Devices LTD.</p>
+  </div>
+
+  <!-- 🔹 Website Content -->
+  <!-- <div class="content">
+    <h1>Website Loaded 🎉</h1>
+    <p>This is your website content.</p>
+  </div> -->
     <header>
         <div class="navdiv">
             <div class="headertop bg-theme text-white py-2">
@@ -750,6 +762,22 @@
     </footer>
 
 </body>
+
+
+  <script>
+    // Preloader hide after 2 sec
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.getElementById("preloader").classList.add("hide");
+      }, 2000); // 2 sec wait
+    });
+  </script>
+
+
+
+
+
+
 <script>
     document.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");
