@@ -25,6 +25,10 @@ body {
       transition: opacity 0.6s ease, visibility 0.6s;
     }
 
+    #preloader p img{
+      width: 30px;
+    }
+
     /* Container with ring */
     .loader {
       position: relative;
