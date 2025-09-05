@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -221,7 +224,7 @@
         <!-- <div class="container"> -->
             <div class="row">
                 <div class="category_carousel owl-carousel owl-theme">
-                    <div class="items animate__animated" id="category_box1">
+                        <div class="items animate__animated" id="category_box1">
                         <div class="m-0 p-4 category_box logo-img">
 
                             <div class="client-slider">
@@ -349,7 +352,7 @@
   <div class="overlay"></div>
 
   <!-- 🔹 Slide 1 -->
-  <div class="slide active" style="background-image:url('images/yellow.jpg')">
+  <div class="slide active" style="background-image:url('images/yellow.jpg'); height: 100%;">
     <section class="carousel-content">
         <div class="col-lg-6">
       <article class="info-section">
@@ -368,7 +371,7 @@
       </div>
     </section>
   </div>
-<div class="overlay"></div>
+
   <!-- 🔹 Slide 2 -->
   <div class="slide" style="background-image:url('images/i3.jpg')">
     <section class="carousel-content">
@@ -385,7 +388,7 @@
       </aside>
     </section>
   </div>
-<div class="overlay"></div>
+
   <!-- 🔹 Slide 3 -->
   <div class="slide" style="background-image:url('images/black.jpg')">
     <section class="carousel-content">
@@ -402,7 +405,7 @@
       </aside>
     </section>
   </div>
-<div class="overlay"></div>
+
   <!-- 🔹 Slide 4 -->
   <div class="slide" style="background-image:url('images/solar.jpg')">
     <section class="carousel-content">
@@ -419,7 +422,7 @@
       </aside>
     </section>
   </div>
-<div class="overlay"></div>
+
   <!-- 🔹 Slide 5 -->
   <div class="slide" style="background-image:url('images/railway.jpg')">
     <section class="carousel-content">
@@ -436,9 +439,9 @@
       </aside>
     </section>
   </div>
-<div class="overlay"></div>
+
   <!-- 🔹 Slide 6 -->
-  <div class="slide" style="background-image:url('images/water1.jpg')">
+  <div class="slide" style="background-image:url('images/6.jpg')">
     <section class="carousel-content">
       <article class="info-section">
         <!-- <p class="info-small-title">Water Infra</p> -->
@@ -460,7 +463,7 @@
       <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
     </button>
     <button class="scroll-arrow-btn" id="downBtn">
-      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>   
     </button>
   </div>
 
@@ -592,6 +595,54 @@
             
         </div>
     </div>
+
+      <section class="testimonial-section">
+    <div class="section-header">
+      <div class="custom-nav">
+        <button class="prev"><i class="fas fa-arrow-left"></i></button>
+      </div>
+      <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+      <div class="custom-nav">
+        <button class="next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="owl-carousel testimonial-carousel">
+
+      <!-- Slide 1 -->
+      <div class="testimonial-card">
+        <p>The Safety Group is a great organization with excellent customer support, product, delivery, and training. They are a very valued business partner in our company.</p>
+        <div class="testimonial-icon"><i class="fas fa-users"></i></div>
+        <h4>James</h4>
+        <span>Plastics Industry</span>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="testimonial-card">
+        <p>The Safety Group offers great services/products and is very responsive, all while having a professional service team with a personal touch.</p>
+        <div class="testimonial-icon"><i class="fas fa-users"></i></div>
+        <h4>Jason</h4>
+        <span>Commercial Transportation</span>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="testimonial-card">
+        <p>The Safety Group is always there when you need them and willing to work around your schedule. From training, PPE, signage, etc., they are a one stop shop.</p>
+        <div class="testimonial-icon"><i class="fas fa-users"></i></div>
+        <h4>John</h4>
+        <span>Commercial Manufacturing</span>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="testimonial-card">
+        <p>Working with The Safety Group has been a great experience. Their dedication to customer satisfaction is unmatched.</p>
+        <div class="testimonial-icon"><i class="fas fa-users"></i></div>
+        <h4>Sarah</h4>
+        <span>Healthcare</span>
+      </div>
+
+    </div>
+  </section>
 
     <footer>
        
@@ -943,6 +994,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 </script>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    var owl;
+    $(document).ready(function(){
+      owl = $('.testimonial-carousel').owlCarousel({
+        loop:true,
+        margin:30,
+        nav:false,
+        dots:false,
+        center:true,
+        items:3,
+        autoplay:true,
+        autoplayTimeout:4000,
+        smartSpeed:800,
+        responsive:{
+          0:{ items:1 },
+          768:{ items:2 },
+          1024:{ items:3 }
+        }
+      });
+
+      // custom buttons
+      $('.custom-nav .next').click(function() {
+        owl.trigger('next.owl.carousel');
+      });
+      $('.custom-nav .prev').click(function() {
+        owl.trigger('prev.owl.carousel');
+      });
+    });
+  </script>
 
 
 
