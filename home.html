@@ -240,21 +240,23 @@
                         <div class="m-0 p-4 category_box logo-img">
 
                             <div class="client-slider">
-                                <div class="client-track">
-                                    <img src="images/Picture1.webp" alt="client">
-                                    <img src="images/Picture2.webp" alt="client">
-                                    <img src="images/Picture3.webp" alt="client">
-                                    <img src="images/Picture4.webp" alt="client">
-                                    <img src="images/Picture5.webp" alt="client">
-                                    <img src="images/Picture6.webp" alt="client">
-                                    <img src="images/Picture1.webp" alt="client">
-                                    <img src="images/Picture2.webp" alt="client">
-                                    <img src="images/Picture3.webp" alt="client">
-                                    <img src="images/Picture4.webp" alt="client">
-                                    <img src="images/Picture5.webp" alt="client">
-                                    <img src="images/Picture6.webp" alt="client">
-                                </div>
-                            </div>
+  
+    <div class="client-track">
+        <img src="images/Picture1.webp" alt="client">
+        <img src="images/Picture2.webp" alt="client">
+        <img src="images/Picture3.webp" alt="client">
+        <img src="images/Picture4.webp" alt="client">
+        <img src="images/Picture5.webp" alt="client">
+        <img src="images/Picture6.webp" alt="client">
+        <img src="images/Picture1.webp" alt="client">
+        <img src="images/Picture2.webp" alt="client">
+        <img src="images/Picture3.webp" alt="client">
+        <img src="images/Picture4.webp" alt="client">
+        <img src="images/Picture5.webp" alt="client">
+        <img src="images/Picture6.webp" alt="client">
+    </div>
+
+</div>
                         </div>
                     </div>
 
@@ -807,6 +809,27 @@
         });
     });
 </script>
+
+const track = document.querySelector(".client-track");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let scrollAmount = 0;
+const scrollStep = 200; // ek click ma ketla px move thavu joye
+
+nextBtn.addEventListener("click", () => {
+    scrollAmount -= scrollStep;
+    track.style.transform = `translateX(${scrollAmount}px)`;
+});
+
+prevBtn.addEventListener("click", () => {
+    scrollAmount += scrollStep;
+    track.style.transform = `translateX(${scrollAmount}px)`;
+});
+
+
+
+
 <script>
     window.addEventListener("scroll", function () {
         let header = document.querySelector(".page-header");
@@ -852,7 +875,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('.category_carousel').owlCarousel({
             loop: true,
@@ -884,7 +907,7 @@
 
         });
     });
-</script>
+</script> -->
 <!-- <script>
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll('.cyber-content');

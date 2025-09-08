@@ -435,7 +435,13 @@ header {
   z-index: 0;
 } */
 
-.logo-img {
+
+
+
+
+
+
+ .logo-img {
     display: flex;
     gap: 10px;
 }
@@ -445,11 +451,11 @@ header {
     width: 150px;
     border-radius: 20px;
 }
-
+  
 .client-slider {
     width: 100%;
     overflow: hidden;
-    /* background: #cde6ff;     */
+   
     padding: 20px 0;
 }
 
@@ -468,14 +474,17 @@ header {
     display: flex;
     gap: 60px;
     animation: scrollright 25s linear infinite;
-}
+} */
 
-/* .client-track img {
+ .client-track img {
   height: 80px;           
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-} */
+} 
+
+
+
 
 
 @keyframes scrollLeft {
