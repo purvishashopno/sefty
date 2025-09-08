@@ -256,6 +256,7 @@
         <img src="images/Picture6.webp" alt="client">
     </div>
 
+    
 </div>
                         </div>
                     </div>
@@ -810,22 +811,6 @@
     });
 </script>
 
-const track = document.querySelector(".client-track");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
-
-let scrollAmount = 0;
-const scrollStep = 200; // ek click ma ketla px move thavu joye
-
-nextBtn.addEventListener("click", () => {
-    scrollAmount -= scrollStep;
-    track.style.transform = `translateX(${scrollAmount}px)`;
-});
-
-prevBtn.addEventListener("click", () => {
-    scrollAmount += scrollStep;
-    track.style.transform = `translateX(${scrollAmount}px)`;
-});
 
 
 
