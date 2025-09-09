@@ -441,50 +441,46 @@ header {
 
 
 
- .logo-img {
-    display: flex;
-    gap: 10px;
-}
-
-.client-track img {
-    height: 150px;
-    width: 150px;
-    border-radius: 20px;
-}
-  
-.client-slider {
-    width: 100%;
-    overflow: hidden;
-   
-    padding: 20px 0;
-}
-
-.client-track {
-    display: flex;
-    gap: 60px;
-    animation: scrollLeft 25s linear infinite;
-}
-
-.client-track1 img {
-    height: 150px;
-    width: 150px;
-    border-radius: 20px;
-}
-.client-track1 {
-    display: flex;
-    gap: 60px;
-    animation: scrollright 25s linear infinite;
-} */
-
- .client-track img {
-  height: 80px;           
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+ .logo-img { 
+  display: flex; 
+  gap: 10px; 
 } 
 
+.client-track img { 
+  height: 150px; 
+  width: 150px; 
+  border-radius: 20px; 
+} 
 
+.client-slider { 
+  width: 100%; 
+  overflow: hidden; 
+  padding: 20px 0; 
+} 
 
+.client-track { 
+  display: flex; 
+  gap: 60px; 
+  animation: scrollLeft 25s linear infinite;
+ } 
+ 
+ .client-track1 img {
+   height: 150px; 
+   width: 150px;
+    border-radius: 20px; 
+  } 
+  
+  .client-track1 { 
+    display: flex; 
+    gap: 60px;
+    animation: scrollright 25s linear infinite;
+   } 
+   
+   .client-track img { 
+    /* height: 80px;  */
+    width: auto; 
+    object-fit: contain; 
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
 
 
 @keyframes scrollLeft {
@@ -2280,7 +2276,7 @@ gap: 10px;
       margin-bottom: 15px;
       border-radius: 6px;
       font-size: 14px;
-      color: #fff;
+      color: #000000;
           border: 1px solid black;
     }
 
